@@ -95,12 +95,14 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="xaml.png" />
+    <Resource Include="Resources\xaml.png" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="sampleVideo.mp4">
+    <Content Include="Resources\sampleVideo.mp4">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Resources\video.avi" />
+    <Resource Include="Resources\xaml.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
