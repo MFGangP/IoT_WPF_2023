@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WP02_simplecontrol"
         mc:Ignorable="d"
-        Title="MainWindow" Height="400" Width="250">
+        Title="MainWindow" Height="400" Width="250" Loaded="Window_Loaded">
     <StackPanel>
         <TextBlock Text="TextBlock" Width="100"></TextBlock>
         <Label Content="Label Control" Width="100"></Label>
@@ -15,6 +15,6 @@
         <ProgressBar x:Name="PgbStep" Value="0" Width="100" Height="15" Maximum="10"></ProgressBar>
 
         <Image Source="Resources/xaml.png" Width="32" Height="32" ></Image>
-        <MediaElement Width="180" Height="100" Source="C:\Source\IoT_WPF_2023\Day01\Day01WpfApp\WP02_simplecontrol\Resources\video.avi" LoadedBehavior="Play" ></MediaElement>
+        <MediaElement x:Name="Mediaplayer" Width="180" Height="100" Source="" LoadedBehavior="Manual" ></MediaElement>
     </StackPanel>
 </Window>

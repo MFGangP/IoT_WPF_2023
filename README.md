@@ -13,5 +13,11 @@
 
 - WPF 기초
 	- 기본 컨트롤
-	- 레이아웃 Grid..
+	- 레이아웃 Grid 사용 방법
+	- Bikeshop App 만들기
+	- WPF만의 개발 방식
+	- Data Binding
 	
+## 3일차
+- WPF 기초
+	- Data Binding 계속

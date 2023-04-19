@@ -1,0 +1,28 @@
+﻿<Window x:Class="WP03_controls.SubWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WP03_controls"
+        mc:Ignorable="d"
+        Title="SubWindow" Height="400" Width="250">
+    <StackPanel>
+        <!-- 격자모양의 컨트롤 -->
+        <!-- 제일 많이 쓰는 방식 -->
+        <Grid Height="60" Width="100" Margin="10" Background="LightBlue">
+            <Button Content="버튼"></Button>
+        </Grid>
+        <!-- 뷰박스(많이 쓰지는 않음) -->
+        <Grid Height="60" Width="100" Margin="10" Background="LightBlue">
+            <Viewbox>
+                <Button Content="버튼"></Button>
+            </Viewbox>
+        </Grid>
+        <!-- 이런게 필요한 이유가 있는데 나중에 설명 -->
+        <Grid Height="60" Width="100" Margin="10" Background="LightBlue">
+            <Viewbox Stretch="Fill">
+                <Button Content="버튼"></Button>
+            </Viewbox>
+        </Grid>
+    </StackPanel>
+</Window>
