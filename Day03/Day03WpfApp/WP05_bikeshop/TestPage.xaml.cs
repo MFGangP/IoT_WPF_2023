@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media;
 using WP05_bikeshop.Logics;
@@ -47,6 +48,11 @@ namespace WP05_bikeshop
         private void Page_Loaded(object sender, System.Windows.RoutedEventArgs e)
         {
             // TxtSample.Text = myCar.Speed.ToString(); // 전통적인 윈폼 방식
+        }
+
+        private void Button_Click(object sender, System.Windows.RoutedEventArgs e)
+        {
+            MessageBox.Show("이것도 버튼입니다.", "정보", MessageBoxButton.OK);
         }
 
         //private void SldValue_ValueChanged(object sender, System.Windows.RoutedPropertyChangedEventArgs<double> e)

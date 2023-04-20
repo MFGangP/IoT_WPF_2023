@@ -13,7 +13,7 @@
         <Logics:MyConverter x:Key="MyConv"></Logics:MyConverter>
     </Page.Resources>
 
-    <Grid Background="LightSlateGray">
+    <Grid Background="{StaticResource backgroundBrush}">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="*"/>
@@ -72,6 +72,43 @@
                     </ItemContainerTemplate>
                 </ComboBox.ItemTemplate>
             </ComboBox>
+        </StackPanel>
+
+        <StackPanel Grid.Row="1" Grid.Column="2">
+            <!-- 그래픽 버튼 만들기 / WPF는 기존 컨트롤에 대한 디자인도 자기 마음대로 변경 가능 -->
+            <Button Content="눌러주세요" Width="120" Height="120" Background="LightPink" Click="Button_Click">
+                <!-- Button Template=""랑 똑같음-->
+                <Button.Template>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Grid>
+                            <Ellipse Fill="{TemplateBinding Background}" Width="100" Height="100"></Ellipse>
+                            <Label Content="{TemplateBinding Content}" HorizontalAlignment="Center" VerticalAlignment="Center"></Label>
+                        </Grid>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+            <Button Content="Press Me" Background="#8080FF" Width="100" Height="100">
+                <Button.Template>
+                    <!-- 타겟 타입 빼면 어디서 가져오라는 소리인지 몰라서 오류 난다. -->
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Grid>
+                            <Rectangle Fill="{TemplateBinding Background}" 
+                                       RadiusX="10" 
+                                       RadiusY="10" 
+                                       StrokeThickness="5" 
+                                       Stroke="DarkBlue">
+                            </Rectangle>
+                            <Label Content="{TemplateBinding Content}" 
+                                   FontSize="16" 
+                                   HorizontalAlignment="Center" 
+                                   VerticalAlignment="Center"
+                                   FontWeight="Bold"
+                                   Foreground="LightCyan">
+                            </Label>
+                        </Grid>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
         </StackPanel>
     </Grid>
 </Page>

@@ -32,5 +32,10 @@ namespace WP05_bikeshop
         {
             DgrProducts.ItemsSource = factory.FindProducts(TxtSearch.Text);
         }
+
+        private void DgrProducts_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            //...
+        }
     }
 }

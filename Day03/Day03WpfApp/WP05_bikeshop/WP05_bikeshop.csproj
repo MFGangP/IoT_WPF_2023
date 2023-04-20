@@ -72,6 +72,10 @@
     <Compile Include="SupportPage.xaml.cs">
       <DependentUpon>SupportPage.xaml</DependentUpon>
     </Compile>
+    <Page Include="BrushDictionary.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="ContaxtPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

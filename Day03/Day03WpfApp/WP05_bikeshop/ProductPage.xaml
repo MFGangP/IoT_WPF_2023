@@ -32,21 +32,25 @@
                 <ColumnDefinition Width="*"></ColumnDefinition>
             </Grid.ColumnDefinitions>
 
-            <Label Content="검색어" FontSize="20" VerticalAlignment="Center" HorizontalAlignment="Right"></Label>
+            <Label Content="검색어" 
+                   FontSize="20" 
+                   VerticalAlignment="Center" 
+                   HorizontalAlignment="Right" 
+                   Background="{StaticResource accentBrush}"></Label>
             <TextBox Grid.Column="1" x:Name="TxtSearch" FontSize="16" Margin="10" TextChanged="TxtSearch_TextChanged"></TextBox>
         </Grid>
-        <DataGrid x:Name="DgrProducts" Grid.Row="2" Grid.Column="0" Margin="5"></DataGrid>
+        <DataGrid x:Name="DgrProducts" Grid.Row="2" Grid.Column="0" Margin="5" Background="{StaticResource backgroundBrush}" MouseDoubleClick="DgrProducts_MouseDoubleClick"></DataGrid>
         <!-- WPF 방식으로 데이터 끌어오는 방법 윈폼이랑 완전히 다름 -->
         <GroupBox Grid.Row="2" Grid.Column="1" Margin="5" Header="제품 정보" FontSize="16" DataContext="{Binding SelectedItem, ElementName=DgrProducts}">
             <StackPanel>
                 <!-- OnPropertyChanged -->
-                <Label Content="제품명" FontWeight="Bold" FontSize="14"></Label>
+                <Label Content="제품명" FontWeight="Bold" FontSize="14" ></Label>
                 <TextBox FontSize="12" Margin="5, 0" Text="{Binding Title}"></TextBox>
                 <Label Content="가격" FontWeight="Bold" FontSize="14"></Label>
                 <TextBox FontSize="12" Margin="5, 0" Text="{Binding Price}"></TextBox>
                 <Label Content="색상" FontWeight="Bold" FontSize="14"></Label>
                 <TextBox FontSize="12" Margin="5, 0" Text="{Binding Color}"> </TextBox>
-                <Border Background="{Binding Color}" Height="15" Margin="5"></Border>
+                <Border Background="{Binding Color}" Height="15" Margin="5, 0"></Border>
                 <Label Content="코드" FontWeight="Bold" FontSize="14"></Label>
                 <TextBox FontSize="12" Margin="5, 0" Text="{Binding Reference}"></TextBox>
             </StackPanel>
