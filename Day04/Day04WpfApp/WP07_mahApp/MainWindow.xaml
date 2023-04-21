@@ -1,0 +1,29 @@
+﻿<mah:MetroWindow 
+    x:Class="WP07_mahApp.MainWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
+    xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
+    xmlns:local="clr-namespace:WP07_mahApp"
+    mc:Ignorable="d"
+    Title="MainWindow" Height="450" Width="800" ResizeMode="NoResize">
+    <!--<mah:MetroWindow.LeftWindowCommands>
+        <mah:WindowCommands>
+            <Button ToolTip="Github site">
+                <iconPacks:PackIconModern Width="24" Height="24" Kind="SocialGithubOctocat"></iconPacks:PackIconModern>
+            </Button>
+        </mah:WindowCommands>
+    </mah:MetroWindow.LeftWindowCommands>-->
+    <mah:MetroWindow.IconTemplate>
+        <DataTemplate>
+            <iconPacks:PackIconModern Kind="YoutubePlay" Margin="10, 5, 0, 0" Width="18" Height="18" Foreground="White"/>
+        </DataTemplate>
+    </mah:MetroWindow.IconTemplate>
+    <!-- mah안에 있는 메트로 윈도우로 변경 -->
+    <Grid>
+        <Button Content="click" HorizontalAlignment="Left" Margin="191,169,0,0" VerticalAlignment="Top" Height="90" Width="150"/>
+
+    </Grid>
+</mah:MetroWindow>
