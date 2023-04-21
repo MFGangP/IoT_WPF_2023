@@ -27,4 +27,9 @@
 - WPF 응용
 	- MahApps.Metro 디자인 적용
 	- MVVM 패턴
+
+<img src="https://raw.githubusercontent.com/MFGangP/IoT_WPF_2023/main/Images/wpf01.png" width="640" />
+
+## 5일차
+- WPF 응용
 	- Data Binding DB 연동
