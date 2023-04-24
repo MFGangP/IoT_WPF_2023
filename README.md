@@ -33,3 +33,6 @@
 
 ## 5일차
 - WPF 응용
+	- MVVM 패턴
+	- MVVM FrameWork / Caliburm
+	- 데이터바인딩 DB연동
