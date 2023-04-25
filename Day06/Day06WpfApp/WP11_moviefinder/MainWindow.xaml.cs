@@ -1,12 +1,15 @@
 ﻿using MahApps.Metro.Controls;
+using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.IO;
 using System.Linq;
 using System.Net;
 using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -17,6 +20,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using WP11_moviefinder.Logics;
+using WP11_moviefinder.Models;
 
 namespace WP11_moviefinder
 {
@@ -43,14 +47,14 @@ namespace WP11_moviefinder
                 await Commons.ShowMessageAsync("검색", "검색 할 영화명을 입력하세요.");
                 return;
             }
-            if (TxtMovieName.Text.Length <= 1)
-            {
-                await Commons.ShowMessageAsync("검색", "검색어를 2자 이상 입력하세요.");
-                return;
-            }
+            //if (TxtMovieName.Text.Length <= 1)
+            //{
+            //    await Commons.ShowMessageAsync("검색", "검색어를 2자 이상 입력하세요.");
+            //    return;
+            //}
             try
             {
-                SearchNaverMovie(TxtMovieName.Text);
+                SearchMovie(TxtMovieName.Text);
             }
             catch (Exception ex)
             {
@@ -69,34 +73,63 @@ namespace WP11_moviefinder
         }
 
         // 실제 검색 메서드
-        private void SearchNaverMovie(string movieName)
+        private async void SearchMovie(string movieName)
         {
-            string clientID = "LlKJbD39wVtTrcTbv9mD"; // 네이버 클라이언트 아이디 검색api
-            string clientSecret = "O1Vnd0DC58"; // // 네이버 클라이언트 비밀번호
-            string openApiUri = $"https://openapi.naver.com/v1/search/movie?start=1&display=30&query={movieName}";
+            string tmdb_apiKey = "0a5bcdf47c42af65469313bdb1b3cf7b";
+            string encording_movieName = HttpUtility.UrlEncode(movieName, Encoding.UTF8);
+            string openApiUri = $"https://api.themoviedb.org/3/search/movie?api_key={tmdb_apiKey}" +
+                                $"&language=ko-KR&page=1&include_adult=false&query={encording_movieName}";
             string result = string.Empty; // 결과값
             
             // API 실행할 객체
             WebRequest req = null;
             WebResponse res = null;
 
-            // 네이버 API 요청
+            StreamReader reader = null;
+            //TMDB API 요청
             try
             {
                 req = WebRequest.Create(openApiUri); // URL을 넣어서 객체를 생성 
-                // Naver API에서 제일 중요한 것 헤더 설정
-                req.Headers.Add("X-Naver-Client-Id", clientID);
-                req.Headers.Add("X-Naver-Client-Secret", clientSecret);
-
                 res = req.GetResponse(); // 요청한 결과를 응답에 할당
+                reader = new StreamReader(res.GetResponseStream());
+                result = reader.ReadToEnd(); // JSON 결과 텍스트로 저장
+                
+                Debug.WriteLine(result);
 
-
-                Debug.WriteLine(res);
             }
             catch (Exception ex)
             {
                 throw ex;
             }
+            finally
+            {
+                reader.Close();
+                res.Close();
+            }
+
+            // result를 json으로 변경
+            var jsonResult = JObject.Parse(result); // string -> json
+            var total = Convert.ToInt32(jsonResult["total_results"]); // 전체 검색 결과 수
+            // await Commons.ShowMessageAsync("검색결과", total.ToString());
+
+            var items = jsonResult["results"];
+            // items를 데이터 그리드에 표시
+            var json_array = items as JArray;
+
+            var movieItems = new List<MovieItem>(); // json에서 넘어온 배열을 담을 장소
+            foreach (var val in json_array)
+            {
+                var MovieItem = new MovieItem()
+                {
+                    Id = Convert.ToInt32(val["id"]),
+                    Title = Convert.ToString(val["title"]),
+                    Original_Title = Convert.ToString(val["original_title"]),
+                    Release_Date = Convert.ToString(val["release_date"]),
+                    Vote_Average = Convert.ToDouble(val["vote_average"])
+                };
+                movieItems.Add(MovieItem);
+            }
+            this.DataContext = movieItems;
         }
     }
 }
