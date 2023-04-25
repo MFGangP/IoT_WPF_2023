@@ -36,3 +36,10 @@
 	- MVVM 패턴
 	- MVVM FrameWork / Caliburm
 	- 데이터바인딩 DB연동
+	
+## 6일차
+- WPF 응용
+	- TBDM 
+	
+<img src="https://raw.githubusercontent.com/MFGangP/IoT_WPF_2023/main/Images/wpf11.png" width="640" />	
+	
