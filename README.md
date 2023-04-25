@@ -39,7 +39,12 @@
 	
 ## 6일차
 - WPF 응용
-	- TBDM 
-	
+	- 영화 검색 앱
+		- TBDM OpenAPI
+		- MahApps.Metro
+		- MahApps.Metro.IconPacks
+		- Newtonsoft.Json
+		
+6일차 영화 검색 앱 중간
+
 <img src="https://raw.githubusercontent.com/MFGangP/IoT_WPF_2023/main/Images/wpf11.png" width="640" />	
-	
