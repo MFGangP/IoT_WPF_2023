@@ -48,3 +48,14 @@
 6일차 영화 검색 앱 중간
 
 <img src="https://raw.githubusercontent.com/MFGangP/IoT_WPF_2023/main/Images/wpf11.png" width="640" />	
+
+## 7일차
+- WPF 응용
+	- 영화검색앱
+		- 화면정리
+		- YouTube OpenAPI
+		- DB 데이터 바인딩
+		- CefSharp WPF
+		
+7일차 영화 검색 앱 중간		
+<img src="https://raw.githubusercontent.com/MFGangP/IoT_WPF_2023/main/Images/wpf11_part2.png" width="640" />	
