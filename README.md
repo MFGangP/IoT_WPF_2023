@@ -77,5 +77,5 @@
 	
 8일차 영화검색 앱
 
-<img src="https://raw.githubusercontent.com/MFGangP/IoT_WPF_2023/main/Images/wpf11_part2.png" width="640" />	
+<img src="https://raw.githubusercontent.com/MFGangP/IoT_WPF_2023/main/Images/wpf11_Final.gif" width="640" />	
 		
