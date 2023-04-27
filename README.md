@@ -79,3 +79,18 @@
 
 <img src="https://raw.githubusercontent.com/MFGangP/IoT_WPF_2023/main/Images/wpf11_Final.gif" width="640" />	
 		
+8일차 미세먼지 확인 앱
+
+<img src="https://raw.githubusercontent.com/MFGangP/IoT_WPF_2023/main/Images/wpf12_part1.png width="640" />
+
+## 9일차 
+
+- WPF 응용
+	- 미세먼지 확인 앱 완료
+		- MahApps.Metro
+		- 데이터포털 OpenAPI
+		- DB 데이터 바인딩(MySQL)
+	- 개인 포트폴리오 개발 방식
+		- 데이터포털 OpenAPI
+		- 네이버, 카카오 OpenAPI
+		- 기타 OpenAPI
