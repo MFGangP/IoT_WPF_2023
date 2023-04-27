@@ -19,11 +19,13 @@
 	- Data Binding
 	
 ## 3일차
+
 - WPF 기초
 	- Data Binding 마무리
 	- 디자인(템플릿, 스타일, 리소스, 리소스딕셔너리)
 	
 ## 4일차
+
 - WPF 응용
 	- MahApps.Metro 디자인 적용
 	- MVVM 패턴
@@ -32,6 +34,7 @@
 <img src="https://raw.githubusercontent.com/MFGangP/IoT_WPF_2023/main/Images/wpf01.png" width="640" />
 
 ## 5일차
+
 - WPF 응용
 	- MVVM 패턴
 	- MVVM FrameWork / Caliburm
@@ -50,6 +53,7 @@
 <img src="https://raw.githubusercontent.com/MFGangP/IoT_WPF_2023/main/Images/wpf11.png" width="640" />	
 
 ## 7일차
+
 - WPF 응용
 	- 영화검색앱
 		- 화면정리
@@ -57,5 +61,21 @@
 		- DB 데이터 바인딩
 		- CefSharp WPF
 		
-7일차 영화 검색 앱 중간		
+7일차 영화 검색 앱 중간	
+	
 <img src="https://raw.githubusercontent.com/MFGangP/IoT_WPF_2023/main/Images/wpf11_part2.png" width="640" />	
+
+## 8일차
+
+- WPF 응용
+	- 영화검색 앱 완료
+		- DB 데이터 바인딩(MySQL)
+	- 미세먼지 확인 앱
+		- MahApps.Metro
+		- 데이터포털 OpenAPI
+		- DB 데이터 바인딩(MySQL)
+	
+8일차 영화검색 앱
+
+<img src="https://raw.githubusercontent.com/MFGangP/IoT_WPF_2023/main/Images/wpf11_part2.png" width="640" />	
+		

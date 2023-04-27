@@ -35,7 +35,7 @@ namespace WP11_moviefinder
         {
             LblMovieName.Content = $"{movieName} 예고편";
         }
-        
+
         // 부모에서 객체를 통채로 전달받을 수 있음
         public TrailerWindow(MovieItem movie) : this()
         {
@@ -58,7 +58,7 @@ namespace WP11_moviefinder
         {
             var youtubeService = new YouTubeService(
                 new BaseClientService.Initializer()
-                { 
+                {
                     ApiKey = "AIzaSyCcWTgzw8_DxtqvyMHHjC5cMy42jzceEDE",
                     ApplicationName = this.GetType().ToString()
                 });
@@ -93,7 +93,7 @@ namespace WP11_moviefinder
 
         private void LsvResult_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
-            if (LsvResult.SelectedItem is YoutubeItem) 
+            if (LsvResult.SelectedItem is YoutubeItem)
             {
                 var video = LsvResult.SelectedItem as YoutubeItem;
                 BrsYoutube.Address = video.URL;

@@ -46,7 +46,7 @@
                 </GridView>
             </ListView.View>
         </ListView>
-        
+
         <!-- 웹 브라우저 영역 -->
         <Grid Grid.Row="0" Grid.Column="1" Grid.RowSpan="2" Margin="10" Background="Gainsboro">
             <!-- <WebBrowser/> 문제가 많아서 안씀-->

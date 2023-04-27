@@ -18,13 +18,18 @@ namespace WP11_moviefinder.Logics
                                                   "Persist Security Info=True;" +
                                                   "User ID=sa;" +
                                                   "Password=12345";
+        // MySQL용
+        public static readonly string myconString = "Server=localhost;" +
+                                                    "Port=3306;" +
+                                                    "Database=miniproject;" +
+                                                    "Uid=root;" +
+                                                    "Pwd=12345;";
 
-
-        public static async Task<MessageDialogResult> ShowMessageAsync(string title, string message, 
+        public static async Task<MessageDialogResult> ShowMessageAsync(string title, string message,
             MessageDialogStyle style = MessageDialogStyle.Affirmative)
         {
             return await ((MetroWindow)Application.Current.MainWindow).ShowMessageAsync(title, message, style, null);
         }
-        
+
     }
 }
