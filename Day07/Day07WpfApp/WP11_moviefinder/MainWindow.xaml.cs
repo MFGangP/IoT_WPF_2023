@@ -449,7 +449,6 @@ namespace WP11_moviefinder
                     this.DataContext = list;
                     isFavorite = true; // 즐겨찾기에서 가져온 내용이라는 걸 알려줌
                     StsResult.Content = $"즐겨찾기 {list.Count}건 조회 완료";
-                    await Commons.ShowMessageAsync("즐겨찾기", $"불러오기 완료");
                 }
             }
             catch (Exception ex)
