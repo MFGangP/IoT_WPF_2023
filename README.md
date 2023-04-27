@@ -81,7 +81,7 @@
 		
 8일차 미세먼지 확인 앱
 
-<img src="https://raw.githubusercontent.com/MFGangP/IoT_WPF_2023/main/Images/wpf12_part1.png width="640" />
+<img src="https://raw.githubusercontent.com/MFGangP/IoT_WPF_2023/main/Images/wpf12_part1.png" width="640" />
 
 ## 9일차 
 
