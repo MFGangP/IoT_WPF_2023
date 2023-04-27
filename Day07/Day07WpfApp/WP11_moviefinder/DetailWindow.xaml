@@ -9,6 +9,6 @@
         mc:Ignorable="d"
         Title="DetailWindow" Height="450" Width="800">
     <Grid>
-        
+        <Button x:Name="BtnTest" Click="BtnTest_Click" />
     </Grid>
 </mah:MetroWindow>

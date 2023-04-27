@@ -24,5 +24,10 @@ namespace WP11_moviefinder
         {
             InitializeComponent();
         }
+
+        private void BtnTest_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

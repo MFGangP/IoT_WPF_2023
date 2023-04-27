@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.33516.290
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WP12_finedustCheck", "WP12_\WP12_finedustCheck.csproj", "{F0817187-CDF1-41F7-A3F8-3668E74083F9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WP12_finedustCheck", "WP12_finedustCheck\WP12_finedustCheck.csproj", "{A23B4796-8779-44CC-B9C4-F9F98CB9FA24}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WP11_moviefinder", "WP11_moviefinder\WP11_moviefinder.csproj", "{62E022A1-2DDE-4189-A9FF-0FF5711F87E2}"
 EndProject
@@ -13,10 +13,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{F0817187-CDF1-41F7-A3F8-3668E74083F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F0817187-CDF1-41F7-A3F8-3668E74083F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F0817187-CDF1-41F7-A3F8-3668E74083F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F0817187-CDF1-41F7-A3F8-3668E74083F9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A23B4796-8779-44CC-B9C4-F9F98CB9FA24}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A23B4796-8779-44CC-B9C4-F9F98CB9FA24}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A23B4796-8779-44CC-B9C4-F9F98CB9FA24}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A23B4796-8779-44CC-B9C4-F9F98CB9FA24}.Release|Any CPU.Build.0 = Release|Any CPU
 		{62E022A1-2DDE-4189-A9FF-0FF5711F87E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{62E022A1-2DDE-4189-A9FF-0FF5711F87E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{62E022A1-2DDE-4189-A9FF-0FF5711F87E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -26,6 +26,6 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {1B504872-FA12-4000-A91C-EB66D4F36252}
+		SolutionGuid = {991AC5C7-9EA8-49B5-8728-90DDA02F6137}
 	EndGlobalSection
 EndGlobal
