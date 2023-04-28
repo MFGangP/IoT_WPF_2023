@@ -90,7 +90,7 @@
 		- MahApps.Metro
 		- 데이터포털 OpenAPI
 		- DB 데이터 바인딩(MySQL)
-	- 개인 포트폴리오 개발 방식
+	- 개인 포트폴리오 개발
 		- 데이터포털 OpenAPI
-		- 네이버, 카카오 OpenAPI
+		- 네이버, Google, 카카오 OpenAPI
 		- 기타 OpenAPI
