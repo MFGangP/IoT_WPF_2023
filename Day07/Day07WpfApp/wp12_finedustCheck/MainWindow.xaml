@@ -36,7 +36,6 @@
                           mah:TextBoxHelper.Watermark="검색날짜 선택" 
                           mah:TextBoxHelper.UseFloatingWatermark="True" 
                           mah:TextBoxHelper.ClearTextButton="True" SelectionChanged="CboReqDate_SelectionChanged" />
-                
             </StackPanel>
         </Grid>        
 
