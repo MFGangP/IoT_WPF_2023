@@ -35,7 +35,7 @@
                       Width="130" Height="40" 
                       Style="{StaticResource MahApps.Styles.ComboBox}" 
                       mah:TextBoxHelper.Watermark="호선" 
-                      mah:TextBoxHelper.UseFloatingWatermark="True"/>
+                      mah:TextBoxHelper.UseFloatingWatermark="True" SelectionChanged="CboLnNm_SelectionChanged"/>
             <ComboBox x:Name="CboStinNm" Grid.Row="0" Grid.Column="1" 
                           Width="200" Height="40"
                           Style="{StaticResource MahApps.Styles.ComboBox}" 

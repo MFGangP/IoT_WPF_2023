@@ -1,9 +1,12 @@
-﻿using MahApps.Metro.Controls;
+﻿using CefSharp.DevTools.Database;
+using MahApps.Metro.Controls;
 using MySql.Data.MySqlClient;
 using MySqlX.XDevAPI.Relational;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Data;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -44,7 +47,7 @@ namespace WP13_miniproject.Views
                 adapter.Fill(ds);
                 List<string> saveDateList = new List<string>();
                 foreach (DataRow row in ds.Tables[0].Rows)
-                {
+                { 
                     saveDateList.Add(Convert.ToString(row[dataname]));
                 }
                 CboName.ItemsSource = saveDateList;
@@ -94,10 +97,40 @@ namespace WP13_miniproject.Views
         {
             if (CboRailOprLittNm != null)
             {
-                string CboRailOprLittNmSelected = CboRailOprLittNm.ItemsSource.ToString();
-
-
+                string CboRailOprLittNmSelected_Query = $@"SELECT DISTINCT ln_nm AS Ln_Nm
+                                                             FROM miniproject.stationinfo
+                                                            WHERE rail_opr_istt_nm  = {CboRailOprLittNm.SelectedItem}";
+                using (MySqlConnection conn = new MySqlConnection(Commons.myConnString))
+                {
+                    if (conn.State == System.Data.ConnectionState.Closed) conn.Open();
+                    MySqlCommand cmd = new MySqlCommand(CboRailOprLittNmSelected_Query, conn);
+                    MySqlDataAdapter adapter = new MySqlDataAdapter(cmd);
+                    DataSet ds = new DataSet();
+                    adapter.Fill(ds);
+                    List<string> saveDateList = new List<string>();
+                    foreach (DataRow row in ds.Tables[0].Rows)
+                    {
+                        saveDateList.Add(Convert.ToString(row["Ln_Nm"]));
+                    }
+                    CboLnNm.ItemsSource = saveDateList;
+                }
             }
+        }
+        private void CboLnNm_SelectionChanged(object sender, SelectionChangedEventArgs e, string CboRailOprLittNmSelected)
+        {
+            string CboLnNmSelected = CboLnNm.SelectedItem.ToString();
+            string CboLnNmSelected_Query = $@"SELECT Stin_Nm
+                                                FROM (
+	                                                    SELECT DISTINCT ln_nm AS Ln_Nm
+		                                                    , stin_nm AS Stin_Nm
+	                                                    FROM miniproject.stationinfo
+	                                                    WHERE rail_opr_istt_nm  = {CboRailOprLittNmSelected} 
+                                                        ) AS L_N
+                                                WHERE Ln_Nm  = {CboLnNmSelected} ";
+        }
+        private void CboLnNm_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            return;
         }
     }
 }
