@@ -98,3 +98,18 @@
 9일차 미세먼지 확인 앱
 
 <img src="https://raw.githubusercontent.com/MFGangP/IoT_WPF_2023/main/Images/wpf12_Final.gif" width="640" />
+
+## 10일차
+
+- 개인 포트폴리오 개발
+	- 철도 장애인 화장실 검색 프로그램 개발
+		- MahApps.Metro
+		- 국토교통부 레일포털 OpenAPI
+		- DB 데이터 바인딩(MySQL)
+		- CefSharp
+		- Newtonsoft.Json
+<img src="https://raw.githubusercontent.com/MFGangP/IoT_WPF_2023/main/Images/wpf12_Final.gif" width="640" />
+
+<img src="https://raw.githubusercontent.com/MFGangP/IoT_WPF_2023/main/Images/wpf12_Final.gif" width="640" />
+
+<img src="https://raw.githubusercontent.com/MFGangP/IoT_WPF_2023/main/Images/wpf12_Final.gif" width="640" />
