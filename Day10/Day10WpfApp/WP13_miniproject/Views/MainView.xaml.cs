@@ -10,16 +10,8 @@ using WP13_miniproject.ViewModels;
 using WP13_miniproject.Models;
 using System.IO;
 using System.Net;
-using static System.Net.WebRequestMethods;
 using System.Diagnostics;
 using Newtonsoft.Json.Linq;
-using MySqlX.XDevAPI.Relational;
-using CefSharp.DevTools.Database;
-using System.Collections;
-using System.Linq;
-using RestSharp;
-using System.Text;
-using System.Web.Script.Serialization;
 
 namespace WP13_miniproject.Views
 {
