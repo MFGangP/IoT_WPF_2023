@@ -247,8 +247,6 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Logics\Commons.cs" />
-    <Compile Include="Logics\KakaoAPI.cs" />
-    <Compile Include="Models\MyLocale.cs" />
     <Compile Include="Models\StationInfo.cs" />
     <Compile Include="Models\ToiletInfo.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />

@@ -277,6 +277,7 @@ namespace WP13_miniproject.Views
                 await Commons.ShowMessageAsync("오류", $"JSON 처리오류 {ex.Message}");
             }
             #endregion
+
             MapBrowser.Address = "https://map.naver.com/v5/search/" + $"{CboStinNm.SelectedItem}역?c=18,0,0,0,dh";
         }
     }
