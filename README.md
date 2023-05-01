@@ -108,8 +108,8 @@
 		- DB 데이터 바인딩(MySQL)
 		- CefSharp
 		- Newtonsoft.Json
-<img src="https://raw.githubusercontent.com/MFGangP/IoT_WPF_2023/main/Images/wpf12_Final.gif" width="640" />
+<img src="https://raw.githubusercontent.com/MFGangP/IoT_WPF_2023/main/Images/wpf13_part1.png" width="640" />
 
-<img src="https://raw.githubusercontent.com/MFGangP/IoT_WPF_2023/main/Images/wpf12_Final.gif" width="640" />
+<img src="https://raw.githubusercontent.com/MFGangP/IoT_WPF_2023/main/Images/wpf13_part2.png" width="640" />
 
-<img src="https://raw.githubusercontent.com/MFGangP/IoT_WPF_2023/main/Images/wpf12_Final.gif" width="640" />
+<img src="https://raw.githubusercontent.com/MFGangP/IoT_WPF_2023/main/Images/wpf13_part3.png" width="640" />
