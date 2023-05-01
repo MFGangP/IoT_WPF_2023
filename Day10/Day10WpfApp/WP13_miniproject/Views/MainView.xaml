@@ -9,7 +9,7 @@
         xmlns:cefSharp="clr-namespace:CefSharp.Wpf;assembly=CefSharp.Wpf"
         xmlns:local="clr-namespace:WP13_miniproject.Views"
         mc:Ignorable="d"
-        Title="VulnerableUserInfo" Height="450" Width="800" 
+        Title="VulnerableUserInfo" Height="600" Width="800" 
         FontFamily="NanumGothic"
         Loaded="MetroWindow_Loaded">
     <Grid>
@@ -20,6 +20,7 @@
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="45"/>
+            <RowDefinition Height="60"/>
             <RowDefinition />
         </Grid.RowDefinitions>
         <TextBlock Grid.Row="0" Grid.Column="0" Text="철도 장애인 화장실 검색 시스템" 
@@ -40,16 +41,33 @@
                           Width="200" Height="40"
                           Style="{StaticResource MahApps.Styles.ComboBox}" 
                           mah:TextBoxHelper.Watermark="역 이름" 
-                          mah:TextBoxHelper.UseFloatingWatermark="True"/>
+                          mah:TextBoxHelper.UseFloatingWatermark="True" SelectionChanged="CboStinNm_SelectionChanged"/>
             <Button x:Name="BtnSearch"
                     Content="검색"
                     Grid.Row="0" Grid.Column="1" 
                     Width="40" Height="40"
-                    Margin="10,0,0,0"/>
+                    Margin="10,0,0,0" Click="BtnSearch_Click"/>
         </StackPanel>
-        
-        <DataGrid Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2"></DataGrid>
-        <!--<cefSharp:ChromiumWebBrowser x:Name="Rail_Map" Address="https://www.google.com/maps/" 
+
+        <DataGrid Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" x:Name="GrdResult"
+                  IsReadOnly="True" Style="{StaticResource MahApps.Styles.DataGrid}"
+                  AutoGenerateColumns="False" ItemsSource="{Binding}">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="게이트내외구분" Binding="{Binding gateInotDvNm}"/>
+                <DataGridTextColumn Header="출구번호" Binding="{Binding exitNo}"/>
+                <DataGridTextColumn Header="지상구분" Binding="{Binding grndDvNm}"/>
+                <DataGridTextColumn Header="역층" Binding="{Binding stinFlor}"/>
+                <DataGridTextColumn Header="상세위치" Binding="{Binding dtlLoc}"/>
+                <DataGridTextColumn Header="기저귀 교환대 개수" Binding="{Binding diapExchNum}"/>
+                <DataGridTextColumn Header="남녀구분" Binding="{Binding mlFmlDvNm}"/>
+                <DataGridTextColumn Header="화장실개수" Binding="{Binding toltNum}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Grid Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2">
+            <cefSharp:ChromiumWebBrowser x:Name="MapBrowser" Address="https://map.naver.com/v5/search/">
+            </cefSharp:ChromiumWebBrowser>
+        </Grid>
+            <!--<cefSharp:ChromiumWebBrowser x:Name="Rail_Map" Address="https://www.google.com/maps/" 
                                      Grid.Row="1" Grid.Column="1" Grid.RowSpan="2"/>-->
     </Grid>
 </mah:MetroWindow>

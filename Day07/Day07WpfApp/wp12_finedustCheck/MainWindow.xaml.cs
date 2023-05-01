@@ -24,6 +24,7 @@ using System.Windows.Shapes;
 using wp12_finedustCheck.Logics;
 using wp12_finedustCheck.Models;
 
+
 namespace wp12_finedustCheck
 {
     /// <summary>
@@ -89,7 +90,7 @@ namespace wp12_finedustCheck
                             Timestamp = Convert.ToDateTime(sensor["timestamp"]),
                             Company_id = Convert.ToString(sensor["company_id"]),
                             Company_name = Convert.ToString(sensor["company_name"])
-                        }); ;
+                        });
                     }
 
                     this.DataContext = dustSensors;

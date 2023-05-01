@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace WP13_miniproject.Models
 {
-    internal class ToiletInfo
+    public class ToiletInfo
     {
         /* 역사별 장애인 화장실 위치
         <body>
@@ -27,15 +27,17 @@ namespace WP13_miniproject.Models
         */
 
         public int idx { get; set; }
-        public string railopristtcd { get ; set; }
-        public string diapexchnum { get; set;}
-        public string dtlloc { get; set;}
-        public string exitno { get; set;}
-        public string gateinotdvnm { get; set;}
-        public string grnddvnm { get; set;}
-        public string mlFmldvnm { get; set;}
-        public string stincd { get; set;}
-        public string stinflor { get; set;}
-        public string toltnum { get; set;}
+        public string railOprIsttCd { get ; set; }
+        public string lnCd { get; set;}
+        public string stinCd { get; set;}
+        public string grndDvNm { get; set;}
+        public string stinFlor { get; set;}
+        public string gateInotDvNm { get; set;}
+        public string exitNo { get; set;}
+        public string dtlLoc { get; set;}
+        public string mlFmlDvNm { get; set;}
+        public string toltNum { get; set;}
+        public string diapExchNum { get; set; }
+
     }
 }

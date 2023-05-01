@@ -7,20 +7,20 @@ CREATE TABLE `stationinfo` (
   `stin_cd` varchar(10) NOT NULL,
   `stin_nm` varchar(20) NOT NULL,
   PRIMARY KEY (`idx`)
-)
+);
 
 CREATE TABLE `toiletinfo` (
   `idx` int NOT NULL AUTO_INCREMENT,
-  `railopristtcd` varchar(10) DEFAULT NULL,
-  `diapexchnum` varchar(40) DEFAULT NULL,
-  `dtlloc` varchar(100) DEFAULT NULL,
-  `exitno` varchar(20) DEFAULT NULL,
-  `gateinotdvnm` varchar(40) DEFAULT NULL,
-  `grnddvnm` varchar(40) DEFAULT NULL,
-  `mlFmldvnm` varchar(40) DEFAULT NULL,
-  `stincd` varchar(40) DEFAULT NULL,
-  `stinflor` varchar(40) DEFAULT NULL,
-  `toltnum` varchar(40) DEFAULT NULL,
+  `railOprIsttCd` varchar(10) DEFAULT NULL,
+  `lnCd` varchar(10) DEFAULT NULL,
+  `stinCd` varchar(10) DEFAULT NULL,
+  `grndDvNm` varchar(20) DEFAULT NULL,
+  `stinFlor` varchar(5) DEFAULT NULL,
+  `gateInotDvNm` varchar(10) DEFAULT NULL,
+  `exitNo` varchar(20) DEFAULT NULL,
+  `dtlLoc` varchar(10) DEFAULT NULL,
+  `mlFmlDvNm` varchar(10) DEFAULT NULL,
+  `toltNum` varchar(40) DEFAULT NULL,
   PRIMARY KEY (`idx`)
-)
+);
 
